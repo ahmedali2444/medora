@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - صحتك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🏥 صحتك</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="doctors.html">الأطباء</a></li>
+                <li><a href="pharmacies.html">الصيدليات</a></li>
+                <li><a href="medicine.html">الأدوية</a></li>
+                <li><a href="login.html" class="active">تسجيل الدخول</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-box">
+                <h2>تسجيل الدخول</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">البريد الإلكتروني:</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">كلمة المرور:</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="rememberMe">
+                            تذكرني
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">تسجيل الدخول</button>
+                    <div class="auth-links">
+                        <p>ليس لديك حساب؟ <a href="register.html">سجل الآن</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏥 صحتك</h3>
+                    <p>منصة طبية شاملة تجمع الأطباء والصيدليات في مصر</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="doctors.html">الأطباء</a></li>
+                        <li><a href="pharmacies.html">الصيدليات</a></li>
+                        <li><a href="medicine.html">الأدوية</a></li>
+                        <li><a href="register.html">سجل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <p>📧 info@sehtak.com</p>
+                    <p>📱 +20 123 456 7890</p>
+                    <p>📍 القاهرة، مصر</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صحتك. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

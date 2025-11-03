@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأدوية - صحتك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🏥 صحتك</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="doctors.html">الأطباء</a></li>
+                <li><a href="pharmacies.html">الصيدليات</a></li>
+                <li><a href="medicine.html" class="active">الأدوية</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>الأدوية</h1>
+            <p>ابحث عن الأدوية ومعلوماتها وأسعارها</p>
+        </div>
+    </section>
+
+    <section class="medicine-search-section">
+        <div class="container">
+            <div class="medicine-search-box">
+                <div class="search-methods">
+                    <div class="search-method active" data-method="text">
+                        <span>🔍</span>
+                        <p>البحث بالنص</p>
+                    </div>
+                    <div class="search-method" data-method="image">
+                        <span>📷</span>
+                        <p>البحث بالصورة</p>
+                    </div>
+                </div>
+
+                <div id="textSearchBox" class="search-box-content">
+                    <input type="text" id="medicineSearch" placeholder="ابحث عن اسم الدواء...">
+                    <button id="medicineSearchBtn" class="btn btn-primary">بحث</button>
+                </div>
+
+                <div id="imageSearchBox" class="search-box-content" style="display: none;">
+                    <div class="image-upload-area" id="imageUploadArea">
+                        <input type="file" id="medicineImage" accept="image/*" style="display: none;">
+                        <label for="medicineImage" class="upload-label">
+                            <span class="upload-icon">📷</span>
+                            <p>اضغط لرفع صورة الدواء</p>
+                            <p class="upload-hint">أو اسحب الصورة هنا</p>
+                        </label>
+                    </div>
+                    <div id="imagePreview" style="display: none;">
+                        <img id="previewImage" src="" alt="معاينة">
+                        <button id="analyzeImageBtn" class="btn btn-primary">تحليل الصورة</button>
+                        <button id="clearImageBtn" class="btn btn-secondary">مسح</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="medicine-results">
+        <div class="container">
+            <div id="medicineResults" class="medicine-grid">
+            </div>
+        </div>
+    </section>
+
+    <div id="medicineModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="medicine-modal-header">
+                    <h2 id="modalMedicineName"></h2>
+                    <p class="medicine-scientific-name" id="modalMedicineScientific"></p>
+                </div>
+                <div class="medicine-modal-info">
+                    <div class="info-section">
+                        <h3>معلومات الدواء</h3>
+                        <p><strong>الاستخدام:</strong> <span id="modalMedicineUse"></span></p>
+                        <p><strong>الجرعة:</strong> <span id="modalMedicineDose"></span></p>
+                        <p><strong>السعر:</strong> <span id="modalMedicinePrice"></span> جنيه</p>
+                        <p><strong>الشركة المصنعة:</strong> <span id="modalMedicineCompany"></span></p>
+                    </div>
+                    <div class="info-section">
+                        <h3>متوفر في الصيدليات التالية</h3>
+                        <div id="modalMedicinePharmacies"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏥 صحتك</h3>
+                    <p>منصة طبية شاملة تجمع الأطباء والصيدليات في مصر</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="doctors.html">الأطباء</a></li>
+                        <li><a href="pharmacies.html">الصيدليات</a></li>
+                        <li><a href="medicine.html">الأدوية</a></li>
+                        <li><a href="register.html">سجل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <p>📧 info@sehtak.com</p>
+                    <p>📱 +20 123 456 7890</p>
+                    <p>📍 القاهرة، مصر</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صحتك. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

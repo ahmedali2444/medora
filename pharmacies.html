@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصيدليات - صحتك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🏥 صحتك</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="doctors.html">الأطباء</a></li>
+                <li><a href="pharmacies.html" class="active">الصيدليات</a></li>
+                <li><a href="medicine.html">الأدوية</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>الصيدليات</h1>
+            <p>اعثر على أقرب صيدلية وتحقق من توفر الأدوية</p>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-bar">
+                <div class="filter-group">
+                    <label for="pharmacyGovernorateFilter">المحافظة:</label>
+                    <select id="pharmacyGovernorateFilter">
+                        <option value="">جميع المحافظات</option>
+                        <option value="القاهرة">القاهرة</option>
+                        <option value="الجيزة">الجيزة</option>
+                        <option value="الإسكندرية">الإسكندرية</option>
+                        <option value="الشرقية">الشرقية</option>
+                        <option value="الدقهلية">الدقهلية</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <input type="text" id="pharmacySearch" placeholder="ابحث عن صيدلية أو دواء...">
+                </div>
+                <div class="filter-group">
+                    <label>
+                        <input type="checkbox" id="openNowFilter">
+                        مفتوحة الآن
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pharmacies-list">
+        <div class="container">
+            <div id="pharmaciesGrid" class="pharmacies-grid">
+            </div>
+        </div>
+    </section>
+
+    <div id="pharmacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="pharmacy-modal-header">
+                    <h2 id="modalPharmacyName"></h2>
+                    <p id="modalPharmacyAddress"></p>
+                    <p id="modalPharmacyPhone"></p>
+                    <p id="modalPharmacyHours"></p>
+                </div>
+                <div class="pharmacy-modal-medicines">
+                    <h3>الأدوية المتوفرة</h3>
+                    <div id="modalMedicinesList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏥 صحتك</h3>
+                    <p>منصة طبية شاملة تجمع الأطباء والصيدليات في مصر</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="doctors.html">الأطباء</a></li>
+                        <li><a href="pharmacies.html">الصيدليات</a></li>
+                        <li><a href="medicine.html">الأدوية</a></li>
+                        <li><a href="register.html">سجل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <p>📧 info@sehtak.com</p>
+                    <p>📱 +20 123 456 7890</p>
+                    <p>📍 القاهرة، مصر</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صحتك. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

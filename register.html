@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل - صحتك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🏥 صحتك</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="doctors.html">الأطباء</a></li>
+                <li><a href="pharmacies.html">الصيدليات</a></li>
+                <li><a href="medicine.html">الأدوية</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-box register-box">
+                <h2>إنشاء حساب جديد</h2>
+
+                <div class="user-type-selector">
+                    <button type="button" class="user-type-btn active" data-type="patient">
+                        مريض
+                    </button>
+                    <button type="button" class="user-type-btn" data-type="doctor">
+                        طبيب
+                    </button>
+                    <button type="button" class="user-type-btn" data-type="pharmacist">
+                        صيدلي
+                    </button>
+                </div>
+
+                <form id="registerForm">
+                    <input type="hidden" id="userType" value="patient">
+
+                    <div class="form-group">
+                        <label for="registerName">الاسم الكامل:</label>
+                        <input type="text" id="registerName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">البريد الإلكتروني:</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPhone">رقم الهاتف:</label>
+                        <input type="tel" id="registerPhone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">كلمة المرور:</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerConfirmPassword">تأكيد كلمة المرور:</label>
+                        <input type="password" id="registerConfirmPassword" required>
+                    </div>
+
+                    <div id="professionalFields" style="display: none;">
+                        <div class="form-group">
+                            <label for="specialty">التخصص:</label>
+                            <select id="specialty">
+                                <option value="">اختر التخصص</option>
+                                <option value="قلب">قلب</option>
+                                <option value="عظام">عظام</option>
+                                <option value="أطفال">أطفال</option>
+                                <option value="جلدية">جلدية</option>
+                                <option value="باطنة">باطنة</option>
+                                <option value="نساء وتوليد">نساء وتوليد</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="governorate">المحافظة:</label>
+                            <select id="governorate">
+                                <option value="">اختر المحافظة</option>
+                                <option value="القاهرة">القاهرة</option>
+                                <option value="الجيزة">الجيزة</option>
+                                <option value="الإسكندرية">الإسكندرية</option>
+                                <option value="الشرقية">الشرقية</option>
+                                <option value="الدقهلية">الدقهلية</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">العنوان التفصيلي:</label>
+                            <input type="text" id="address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="licenseNumber">رقم النقابة / الترخيص:</label>
+                            <input type="text" id="licenseNumber">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="idCardImage">صورة البطاقة الشخصية:</label>
+                            <input type="file" id="idCardImage" accept="image/*">
+                            <small>يجب أن تكون الصورة واضحة وسارية المفعول</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileImage">صورة شخصية:</label>
+                            <input type="file" id="profileImage" accept="image/*">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="agreeTerms" required>
+                            أوافق على <a href="#">الشروط والأحكام</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">إنشاء الحساب</button>
+
+                    <div class="auth-links">
+                        <p>لديك حساب بالفعل؟ <a href="login.html">سجل الدخول</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏥 صحتك</h3>
+                    <p>منصة طبية شاملة تجمع الأطباء والصيدليات في مصر</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="doctors.html">الأطباء</a></li>
+                        <li><a href="pharmacies.html">الصيدليات</a></li>
+                        <li><a href="medicine.html">الأدوية</a></li>
+                        <li><a href="register.html">سجل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <p>📧 info@sehtak.com</p>
+                    <p>📱 +20 123 456 7890</p>
+                    <p>📍 القاهرة، مصر</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صحتك. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

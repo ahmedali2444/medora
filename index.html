@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صحتك - منصة الأطباء والصيدليات في مصر</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🏥 صحتك</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="doctors.html">الأطباء</a></li>
+                <li><a href="pharmacies.html">الصيدليات</a></li>
+                <li><a href="medicine.html">الأدوية</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>منصتك الطبية الشاملة في مصر</h1>
+                <p>ابحث عن الأطباء والصيدليات والأدوية في مكان واحد</p>
+                <div class="search-box">
+                    <input type="text" id="mainSearch" placeholder="ابحث عن طبيب، صيدلية، أو دواء...">
+                    <button id="searchBtn" class="btn btn-primary">بحث</button>
+                </div>
+                <div class="search-suggestions">
+                    <span>اقتراحات:</span>
+                    <button class="suggestion-chip" data-query="طبيب قلب">طبيب قلب</button>
+                    <button class="suggestion-chip" data-query="صيدلية قريبة">صيدلية قريبة</button>
+                    <button class="suggestion-chip" data-query="باراسيتامول">باراسيتامول</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">مميزات المنصة</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>بحث ذكي</h3>
+                    <p>ابحث بسهولة عن الأطباء والصيدليات والأدوية باستخدام محرك البحث الذكي</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>ترشيحات ذكية</h3>
+                    <p>احصل على ترشيحات مخصصة للأطباء والصيدليات بناءً على موقعك وتقييمات المستخدمين</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>حجز مباشر</h3>
+                    <p>احجز موعدك مع الطبيب مباشرة من المنصة بكل سهولة ويسر</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-access">
+        <div class="container">
+            <h2 class="section-title">الخدمات السريعة</h2>
+            <div class="services-grid">
+                <a href="doctors.html" class="service-card">
+                    <div class="service-icon">👨‍⚕️</div>
+                    <h3>الأطباء</h3>
+                    <p>ابحث عن أفضل الأطباء في جميع التخصصات</p>
+                </a>
+                <a href="pharmacies.html" class="service-card">
+                    <div class="service-icon">💊</div>
+                    <h3>الصيدليات</h3>
+                    <p>اعثر على أقرب صيدلية وتحقق من توفر الأدوية</p>
+                </a>
+                <a href="medicine.html" class="service-card">
+                    <div class="service-icon">💉</div>
+                    <h3>الأدوية</h3>
+                    <p>ابحث عن الأدوية ومعلوماتها وأسعارها</p>
+                </a>
+                <a href="register.html" class="service-card">
+                    <div class="service-icon">✍️</div>
+                    <h3>سجل كطبيب</h3>
+                    <p>انضم إلى منصتنا كمقدم خدمة طبية</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏥 صحتك</h3>
+                    <p>منصة طبية شاملة تجمع الأطباء والصيدليات في مصر</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="doctors.html">الأطباء</a></li>
+                        <li><a href="pharmacies.html">الصيدليات</a></li>
+                        <li><a href="medicine.html">الأدوية</a></li>
+                        <li><a href="register.html">سجل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <p>📧 info@sehtak.com</p>
+                    <p>📱 +20 123 456 7890</p>
+                    <p>📍 القاهرة، مصر</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صحتك. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

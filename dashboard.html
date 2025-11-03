@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - صحتك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🏥 صحتك</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="doctors.html">الأطباء</a></li>
+                <li><a href="pharmacies.html">الصيدليات</a></li>
+                <li><a href="medicine.html">الأدوية</a></li>
+                <li><a href="dashboard.html" class="active">لوحة التحكم</a></li>
+                <li><a href="#" id="logoutBtn">تسجيل الخروج</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>مرحباً، <span id="userName"></span></h1>
+                <p id="userRole"></p>
+            </div>
+
+            <div id="patientDashboard" class="dashboard-content" style="display: none;">
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>المواعيد القادمة</h3>
+                        <p class="stat-number" id="upcomingAppointments">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>الزيارات السابقة</h3>
+                        <p class="stat-number" id="pastAppointments">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>الأدوية المحفوظة</h3>
+                        <p class="stat-number" id="savedMedicines">0</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-section-content">
+                    <h2>المواعيد القادمة</h2>
+                    <div id="patientAppointments" class="appointments-list">
+                    </div>
+                </div>
+
+                <div class="dashboard-section-content">
+                    <h2>الملف الطبي</h2>
+                    <div class="medical-record">
+                        <p>لا توجد سجلات طبية حالياً</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="doctorDashboard" class="dashboard-content" style="display: none;">
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>المواعيد اليوم</h3>
+                        <p class="stat-number" id="todayAppointments">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>إجمالي المرضى</h3>
+                        <p class="stat-number" id="totalPatients">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>التقييم</h3>
+                        <p class="stat-number" id="doctorRating">4.8</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-section-content">
+                    <h2>مواعيد اليوم</h2>
+                    <div id="doctorAppointments" class="appointments-list">
+                    </div>
+                </div>
+
+                <div class="dashboard-section-content">
+                    <h2>التقييمات</h2>
+                    <div id="doctorReviews" class="reviews-list">
+                    </div>
+                </div>
+
+                <div class="dashboard-section-content">
+                    <h2>إعدادات العيادة</h2>
+                    <form id="clinicSettingsForm">
+                        <div class="form-group">
+                            <label for="clinicHours">ساعات العمل:</label>
+                            <input type="text" id="clinicHours" placeholder="السبت - الخميس: 5م - 9م">
+                        </div>
+                        <div class="form-group">
+                            <label for="consultationFee">سعر الكشف:</label>
+                            <input type="number" id="consultationFee" placeholder="200">
+                        </div>
+                        <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="pharmacistDashboard" class="dashboard-content" style="display: none;">
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h3>الأدوية المتوفرة</h3>
+                        <p class="stat-number" id="availableMedicines">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>الأدوية الناقصة</h3>
+                        <p class="stat-number" id="outOfStockMedicines">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>الطلبات اليوم</h3>
+                        <p class="stat-number" id="todayOrders">0</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-section-content">
+                    <h2>إدارة الأدوية</h2>
+                    <button id="addMedicineBtn" class="btn btn-primary">إضافة دواء جديد</button>
+                    <div id="pharmacyMedicines" class="medicines-management">
+                    </div>
+                </div>
+
+                <div class="dashboard-section-content">
+                    <h2>إعدادات الصيدلية</h2>
+                    <form id="pharmacySettingsForm">
+                        <div class="form-group">
+                            <label for="pharmacyHours">ساعات العمل:</label>
+                            <input type="text" id="pharmacyHours" placeholder="يومياً: 9ص - 11م">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="open24Hours">
+                                مفتوح 24 ساعة
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="addMedicineModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2>إضافة دواء جديد</h2>
+                <form id="addMedicineForm">
+                    <div class="form-group">
+                        <label for="newMedicineName">اسم الدواء:</label>
+                        <input type="text" id="newMedicineName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newMedicinePrice">السعر:</label>
+                        <input type="number" id="newMedicinePrice" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="newMedicineQuantity">الكمية المتوفرة:</label>
+                        <input type="number" id="newMedicineQuantity" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="newMedicineAvailable" checked>
+                            متوفر
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">إضافة</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏥 صحتك</h3>
+                    <p>منصة طبية شاملة تجمع الأطباء والصيدليات في مصر</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="doctors.html">الأطباء</a></li>
+                        <li><a href="pharmacies.html">الصيدليات</a></li>
+                        <li><a href="medicine.html">الأدوية</a></li>
+                        <li><a href="register.html">سجل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <p>📧 info@sehtak.com</p>
+                    <p>📱 +20 123 456 7890</p>
+                    <p>📍 القاهرة، مصر</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صحتك. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

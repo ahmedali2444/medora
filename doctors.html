@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأطباء - صحتك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🏥 صحتك</h2>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="doctors.html" class="active">الأطباء</a></li>
+                <li><a href="pharmacies.html">الصيدليات</a></li>
+                <li><a href="medicine.html">الأدوية</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>الأطباء</h1>
+            <p>ابحث عن أفضل الأطباء في جميع التخصصات</p>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-bar">
+                <div class="filter-group">
+                    <label for="governorateFilter">المحافظة:</label>
+                    <select id="governorateFilter">
+                        <option value="">جميع المحافظات</option>
+                        <option value="القاهرة">القاهرة</option>
+                        <option value="الجيزة">الجيزة</option>
+                        <option value="الإسكندرية">الإسكندرية</option>
+                        <option value="الشرقية">الشرقية</option>
+                        <option value="الدقهلية">الدقهلية</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="specialtyFilter">التخصص:</label>
+                    <select id="specialtyFilter">
+                        <option value="">جميع التخصصات</option>
+                        <option value="قلب">قلب</option>
+                        <option value="عظام">عظام</option>
+                        <option value="أطفال">أطفال</option>
+                        <option value="جلدية">جلدية</option>
+                        <option value="باطنة">باطنة</option>
+                        <option value="نساء وتوليد">نساء وتوليد</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <input type="text" id="doctorSearch" placeholder="ابحث عن طبيب...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="doctors-list">
+        <div class="container">
+            <div id="doctorsGrid" class="doctors-grid">
+            </div>
+        </div>
+    </section>
+
+    <div id="doctorModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="doctor-modal-header">
+                    <img id="modalDoctorImage" src="" alt="">
+                    <div>
+                        <h2 id="modalDoctorName"></h2>
+                        <p id="modalDoctorSpecialty"></p>
+                        <div class="rating" id="modalDoctorRating"></div>
+                    </div>
+                </div>
+                <div class="doctor-modal-info">
+                    <h3>معلومات الطبيب</h3>
+                    <p><strong>العنوان:</strong> <span id="modalDoctorAddress"></span></p>
+                    <p><strong>رقم الهاتف:</strong> <span id="modalDoctorPhone"></span></p>
+                    <p><strong>سعر الكشف:</strong> <span id="modalDoctorPrice"></span> جنيه</p>
+                    <p><strong>مواعيد العمل:</strong> <span id="modalDoctorHours"></span></p>
+
+                    <h3>حجز موعد</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label>اسم المريض:</label>
+                            <input type="text" id="patientName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>رقم الهاتف:</label>
+                            <input type="tel" id="patientPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>التاريخ:</label>
+                            <input type="date" id="appointmentDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label>الوقت:</label>
+                            <select id="appointmentTime" required>
+                                <option value="">اختر الوقت</option>
+                                <option value="09:00">09:00 صباحاً</option>
+                                <option value="10:00">10:00 صباحاً</option>
+                                <option value="11:00">11:00 صباحاً</option>
+                                <option value="12:00">12:00 ظهراً</option>
+                                <option value="17:00">05:00 مساءً</option>
+                                <option value="18:00">06:00 مساءً</option>
+                                <option value="19:00">07:00 مساءً</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">تأكيد الحجز</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏥 صحتك</h3>
+                    <p>منصة طبية شاملة تجمع الأطباء والصيدليات في مصر</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="doctors.html">الأطباء</a></li>
+                        <li><a href="pharmacies.html">الصيدليات</a></li>
+                        <li><a href="medicine.html">الأدوية</a></li>
+                        <li><a href="register.html">سجل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <p>📧 info@sehtak.com</p>
+                    <p>📱 +20 123 456 7890</p>
+                    <p>📍 القاهرة، مصر</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 صحتك. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
